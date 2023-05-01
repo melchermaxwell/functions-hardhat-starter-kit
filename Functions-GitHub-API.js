@@ -4,9 +4,9 @@ const owner = args[0]
 const repository = args[1]
 const pullRequestId = args[2]
 
-if (secrets.githubAuthToken == "") {
-  throw Error("You are missing your GitHub AUTH Token")
-}
+// if (secrets.githubAuthToken == "") {
+//   throw Error("You are missing your GitHub AUTH Token")
+// }
 
 const githubRequest = Functions.makeHttpRequest({
   url: `https://api.github.com/repos/${owner}/${repository}/pulls/${pullRequestId}/merge`,
